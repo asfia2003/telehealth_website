@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="foam.css">
+</head>
+<body>
+    <div class="form-page-container">
+        <h2>Signup</h2>
+        <form action="signup.php" method="POST" class="form">
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="patient">Patient</option>
+                <option value="doctor">Doctor</option>
+            </select>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Doctor-specific fields -->
+            <div id="doctorFields" style="display: none;">
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization">
+
+                <label for="experience">Experience (Years):</label>
+                <input type="number" id="experience" name="experience" min="1">
+
+                <label for="available_timings">Available Timings:</label>
+                <input type="text" id="available_timings" name="available_timings">
+            </div>
+
+            <button type="submit" class="form-button">Signup</button>
+        </form>
+    </div>
+    <script src="singup.js"></script>
+</body>
+</html>

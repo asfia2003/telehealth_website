@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Health Records</a></li>
+                <li><a href="#">Consultations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome, [User's Name]</h1>
+                <p>Your last login: <span id="lastLogin"></span></p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Upcoming Appointments</h3>
+                    <p>You have 3 upcoming appointments.</p>
+                </div>
+                <div class="card">
+                    <h3>Messages</h3>
+                    <p>You have 5 new messages.</p>
+                </div>
+                <div class="card">
+                    <h3>Health Tips</h3>
+                    <p>Check the latest health blogs!</p>
+                </div>
+            </div>
+            <div class="details-section">
+                <h2>Recent Activities</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-12-14</td>
+                            <td>Consultation with Dr. Smith</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-10</td>
+                            <td>Health Blog Published</td>
+                            <td>Published</td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-09</td>
+                            <td>Appointment Booked</td>
+                            <td>Scheduled</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

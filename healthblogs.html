@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Blogs - TeleHealth</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #0088cc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .blog-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 20px;
+      animation: slideInFromTop 1s ease-in-out;
+    }
+
+    .blog-header h2 {
+      color: #005f8a;
+      font-size: 2rem;
+    }
+
+    .blogs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .blog-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 15px;
+    }
+
+    .blog-card-content h3 {
+      color: #005f8a;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .blog-card-content p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .blog-card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0088cc;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .blog-card-content a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #0088cc;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Read More Section */
+    .read-more-content {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .blog-card.show-more .read-more-content {
+      display: block;
+    }
+
+    .blog-card.show-more a.read-more-btn {
+      display: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromTop {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    function toggleReadMore(event, card) {
+      card.classList.toggle('show-more');
+      event.preventDefault();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Health Blogs</h1>
+  </header>
+
+  <div class="blog-container">
+    <div class="blog-header">
+      <h2>Latest Health Tips & Articles</h2>
+    </div>
+
+    <div class="blogs">
+      <!-- Blog Card 1 -->
+      <div class="blog-card" onclick="toggleReadMore(event, this)">
+        <img src="https://www.cybersafe360.com.au/wp-content/uploads/2024/03/10-healthy-diet-tips-for-technology-professionals.jpg" alt="Healthy Lifestyle">
+        <div class="blog-card-content">
+          <h3>10 Tips for a Healthy Lifestyle</h3>
+          <p>Discover simple ways to incorporate healthier habits into your daily routine...</p>
+          <a href="#" class="read-more-btn">Read More</a>
+          <div class="read-more-content">
+            <p>Eating balanced meals, staying hydrated, and getting regular exercise can significantly improve your overall health. Begin with small, achievable changes to see long-term benefits.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card" onclick="toggleReadMore(event, this)">
+        <img src="https://thumbs.dreamstime.com/z/how-to-improve-your-mental-health-infographic-vector-eps-illustration-how-to-improve-your-mental-health-infographic-vector-eps-183599177.jpg" alt="Mental Wellness">
+        <div class="blog-card-content">
+          <h3>Boost Your Mental Wellness</h3>
+          <p>Learn how to manage stress and improve mental health with practical tips...</p>
+          <a href="#" class="read-more-btn">Read More</a>
+          <div class="read-more-content">
+            <p>Mental health is just as important as physical health. Practices such as mindfulness, journaling, and talking to a trusted friend or professional can make a big difference.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card" onclick="toggleReadMore(event, this)">
+        <img src="https://www.positivemed.com/wp-content/uploads/2020/09/2353-The-Ultimate-Nutrition-Guide-for-Exercise.jpg" alt="Nutrition Advice">
+        <div class="blog-card-content">
+          <h3>The Ultimate Nutrition Guide</h3>
+          <p>Explore the best foods to include in your diet and how they can boost...</p>
+          <a href="#" class="read-more-btn">Read More</a>
+          <div class="read-more-content">
+            <p>Superfoods like spinach, blueberries, and quinoa are packed with nutrients. Learn how to combine these foods to create delicious and healthy meals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="blog-card" onclick="toggleReadMore(event, this)">
+        <img src="https://freshfitness.ca/wp-content/uploads/2021/01/1.jpg" alt="Exercise Tips">
+        <div class="blog-card-content">
+          <h3>Exercise Tips for Busy People</h3>
+          <p>Find out how to stay active and fit even with a tight schedule...</p>
+          <a href="#" class="read-more-btn">Read More</a>
+          <div class="read-more-content">
+            <p>Quick workouts like 15-minute HIIT sessions or a simple walk during lunch breaks can keep you fit. Consistency is key to maintaining good health.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 TeleHealth. All Rights Reserved.
+  </footer>
+</body>
+</html>

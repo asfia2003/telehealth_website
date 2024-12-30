@@ -1,0 +1,124 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1abc9c;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #35424a;
+    padding-bottom: 10px;
+}
+
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content table th, 
+.main-content table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.main-content table th {
+    background-color: #35424a;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.main-content table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.main-content table tr:hover {
+    background-color: #e1f7e1;
+}
+
+/* Action Buttons */
+.main-content form button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-content form button:hover {
+    background-color: #16a085;
+}
+
+.main-content form button[value="cancelled"] {
+    background-color: #e74c3c;
+}
+
+.main-content form button[value="cancelled"]:hover {
+    background-color: #c0392b;
+}
